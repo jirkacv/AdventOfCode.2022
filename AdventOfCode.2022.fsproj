@@ -10,7 +10,9 @@
     <ItemGroup>
         <Compile Include="Inputs\Common.fs" />
         <Compile Include="Inputs\Inputs01.fs" />
+        <Compile Include="Inputs\Inputs02.fs" />
         <Compile Include="Days\Day01.fs" />
+        <Compile Include="Days\Day02.fs" />
         <Compile Include="Program.fs" />
     </ItemGroup>
 
