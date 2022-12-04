@@ -1,15 +1,4 @@
-﻿namespace AdventOfCode2022.Inputs
-
-module Inputs03 =
-
-    let [<Literal>] Test = @"vJrwpWtwJgWrhcsFMMfFFhFp
-jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
-PmmdzqPrVvPwwTWBwg
-wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
-ttgJtRGJQctTZtZT
-CrZsJsPPZsGzwwsLwLmpwMDw"
-
-    let [<Literal>] Task = @"hqBqJsqHhHvhHHqlBvlfpHQQwLVzVwtVzjzttjQVSjMjwL
+hqBqJsqHhHvhHHqlBvlfpHQQwLVzVwtVzjzttjQVSjMjwL
 gRTRnCRsFNGbTzLjwcSTMmSz
 dGgsRWPGdWgZJqBBqhfpPq
 HNCNJHCWJRRLqNJWlfrrrwsmlwGmmf
@@ -308,4 +297,4 @@ DrNNBbwNHNwlbjFbbCNjNwDWWDPPVfDMgfmVMfnMWmmP
 rvJBbbBNcLCtJZQL
 NfLlqLhbNPddLPqLhpgHwFFwFHHTwRHWwPFTrT
 MSMSCnjBnBjCscjVDVljTvHmmWnrwTrwFTrvTWTT
-JCMMBzDMJcZZCjDzSBDNJgdfdQlqlLNdhgGLhp"
+JCMMBzDMJcZZCjDzSBDNJgdfdQlqlLNdhgGLhp

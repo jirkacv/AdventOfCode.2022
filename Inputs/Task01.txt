@@ -1,22 +1,4 @@
-﻿namespace AdventOfCode2022.Inputs
-
-module Inputs01 =
-    let [<Literal>] Test = @"1000
-2000
-3000
-
-4000
-
-5000
-6000
-
-7000
-8000
-9000
-
-10000"
-
-    let [<Literal>] Task = @"5916
+﻿5916
 7281
 1715
 3853
@@ -2277,4 +2259,4 @@ module Inputs01 =
 1955
 4056
 7203
-3175"
+3175

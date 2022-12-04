@@ -8,14 +8,16 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Inputs\Common.fs" />
-        <Compile Include="Inputs\Inputs01.fs" />
-        <Compile Include="Inputs\Inputs02.fs" />
-        <Compile Include="Inputs\Inputs03.fs" />
+        <Content Include="Inputs\*">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+    
+    <ItemGroup>        
+        <Compile Include="Inputs.fs" />
         <Compile Include="Days\Day01.fs" />
         <Compile Include="Days\Day02.fs" />
         <Compile Include="Days\Day03.fs" />
-        <Compile Include="Program.fs" />
     </ItemGroup>
 
     <ItemGroup>

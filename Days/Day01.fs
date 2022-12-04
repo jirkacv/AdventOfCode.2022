@@ -32,16 +32,16 @@ module Day01 =
     type Tests(output:ITestOutputHelper) =
         [<Fact>]
         let testPart1() =
-            Inputs01.Test |> parseInput |> part1 |> should equal 24000
+             loadInput Test 1 |> part1 |> should equal 24000
 
         [<Fact>]
         let taskPart1() =
-            Inputs01.Task |> parseInput |> part1 |> string |> output.WriteLine
+            loadInput Task 1 |> part1 |> string |> output.WriteLine
 
         [<Fact>]
         let testPart2() =
-            Inputs01.Test |> parseInput |> part2 |> should equal 45000
+            loadInput Test 1 |> part2 |> should equal 45000
 
         [<Fact>]
         let taskPart2() =
-            Inputs01.Task |> parseInput |> part2 |> string |> output.WriteLine
+            loadInput Task 1 |> part2 |> string |> output.WriteLine

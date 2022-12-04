@@ -1,12 +1,4 @@
-﻿namespace AdventOfCode2022.Inputs
-
-module Inputs02 =
-
-    let [<Literal>] Test = @"A Y
-B X
-C Z"
-
-    let [<Literal>] Task = @"A X
+A X
 A Z
 A Z
 A X
@@ -2505,4 +2497,4 @@ A Z
 C Y
 A X
 C Z
-A Z"
+A Z

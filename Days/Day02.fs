@@ -96,16 +96,16 @@ module Day02 =
     type Tests(output:ITestOutputHelper) =
         [<Fact>]
         let testPart1() =
-            Inputs02.Test |> parseInputMapped part1mapper |> part1 |> should equal 15
+            part1mapper |> loadInputMapped Test 2 |> part1 |> should equal 15
 
         [<Fact>]
         let taskPart1() =
-            Inputs02.Task |> parseInputMapped part1mapper |> part1 |> string |> output.WriteLine
+            part1mapper |> loadInputMapped Task 2 |> part1 |> string |> output.WriteLine
 
         [<Fact>]
         let testPart2() =
-            Inputs02.Test |> parseInputMapped part2mapper |> part2 |> should equal 12
+            part2mapper |> loadInputMapped Test 2 |> part2 |> should equal 12
 
         [<Fact>]
         let taskPart2() =
-            Inputs02.Task |> parseInputMapped part2mapper |> part2 |> string |> output.WriteLine
+            part2mapper |> loadInputMapped Task 2 |> part2 |> string |> output.WriteLine
