@@ -1,10 +1,7 @@
 ﻿namespace AdventOfCode2022.Days
 
 open System
-open AdventOfCode2022.Inputs
-open Xunit
 open Xunit.Abstractions
-open FsUnit.Xunit
 
 module Day01 =
 
@@ -30,18 +27,4 @@ module Day01 =
         |> Array.sum
 
     type Tests(output:ITestOutputHelper) =
-        [<Fact>]
-        let testPart1() =
-             loadInput Test 1 |> part1 |> should equal 24000
-
-        [<Fact>]
-        let taskPart1() =
-            loadInput Task 1 |> part1 |> string |> output.WriteLine
-
-        [<Fact>]
-        let testPart2() =
-            loadInput Test 1 |> part2 |> should equal 45000
-
-        [<Fact>]
-        let taskPart2() =
-            loadInput Task 1 |> part2 |> string |> output.WriteLine
+        inherit DayTests.Tests<int>(output, 1, part1, 24000, part2, 45000 )

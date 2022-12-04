@@ -14,7 +14,8 @@
     </ItemGroup>
     
     <ItemGroup>        
-        <Compile Include="Inputs.fs" />
+        <Compile Include="Inputs.fs" />        
+        <Compile Include="Days\DayTests.fs" />
         <Compile Include="Days\Day01.fs" />
         <Compile Include="Days\Day02.fs" />
         <Compile Include="Days\Day03.fs" />

@@ -40,19 +40,6 @@ module Day03 =
         |> Array.sum
 
 
+
     type Tests(output:ITestOutputHelper) =
-        [<Fact>]
-        let testPart1() =
-            loadInput Test 3 |> part1 |> should equal 157
-
-        [<Fact>]
-        let taskPart1() =
-            loadInput Task 3 |> part1 |> string |> output.WriteLine
-
-        [<Fact>]
-        let testPart2() =
-            loadInput Test 3 |> part2 |> should equal 70
-
-        [<Fact>]
-        let taskPart2() =
-            loadInput Task 3 |> part2 |> string |> output.WriteLine
+        inherit DayTests.Tests<int>(output, 3, part1, 157, part2, 70 )

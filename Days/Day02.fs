@@ -62,9 +62,13 @@ module Day02 =
             |> Outcome.score
         roundScore + myMove.Score
 
-    let part1 input =
+    let part1mapper (row : string) =
+        row[2] |> string |> Symbol.ofMyMove,
+        row[0] |> string |> Symbol.ofOpponentMove
+
+    let rec part1 input =
         input
-        |> Array.map roundScore
+        |> Array.map (part1mapper >> roundScore)
         |> Array.sum
 
 
@@ -78,34 +82,18 @@ module Day02 =
         | Paper, Loss -> Rock
         | Scissors, Loss -> Paper
 
-    let part2 input =
-        input
-        |> Array.map (fun (opponentMove, outcome) ->
-            let myMove = symbolFromOutcome opponentMove outcome
-            myMove.Score + (outcome |> Outcome.score))
-        |> Array.sum
-
-    let part1mapper (row : string) =
-        row[2] |> string |> Symbol.ofMyMove,
-        row[0] |> string |> Symbol.ofOpponentMove
-
     let part2mapper (row : string) =
         row[0] |> string |> Symbol.ofOpponentMove,
         row[2] |> string |> Outcome.ofString
 
+    let part2 input =
+        input
+        |> Array.map (fun row ->
+            let opponentMove, outcome = row |> part2mapper
+            let myMove = symbolFromOutcome opponentMove outcome
+            myMove.Score + (outcome |> Outcome.score))
+        |> Array.sum
+
+
     type Tests(output:ITestOutputHelper) =
-        [<Fact>]
-        let testPart1() =
-            part1mapper |> loadInputMapped Test 2 |> part1 |> should equal 15
-
-        [<Fact>]
-        let taskPart1() =
-            part1mapper |> loadInputMapped Task 2 |> part1 |> string |> output.WriteLine
-
-        [<Fact>]
-        let testPart2() =
-            part2mapper |> loadInputMapped Test 2 |> part2 |> should equal 12
-
-        [<Fact>]
-        let taskPart2() =
-            part2mapper |> loadInputMapped Task 2 |> part2 |> string |> output.WriteLine
+        inherit DayTests.Tests<int>(output, 2, part1, 15, part2, 12 )
