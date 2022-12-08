@@ -22,6 +22,7 @@
         <Compile Include="Days\Day04.fs" />
         <Compile Include="Days\Day05.fs" />
         <Compile Include="Days\Day06.fs" />
+        <Compile Include="Days\Day07.fs" />
     </ItemGroup>
 
     <ItemGroup>
